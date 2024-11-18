@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obtener Información del Dispositivo</title>
+</head>
+<body>
+    <h1>Información del dispositivo</h1>
+    <div id="device-info"></div>
+
+    <script>
+        // Obtiene el User-Agent del navegador
+        const userAgent = navigator.userAgent;
+
+        // Muestra la información del User-Agent
+        document.getElementById("device-info").innerText = `User-Agent: ${userAgent}`;
+
+        // Detecta el sistema operativo y posibles modelos
+        if (/iPhone/i.test(userAgent)) {
+            console.log("Es un iPhone");
+        } else if (/Android/i.test(userAgent)) {
+            console.log("Es un dispositivo Android");
+        } else {
+            console.log("No se pudo identificar el dispositivo.");
+        }
+    </script>
+</body>
+</html>
